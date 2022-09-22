@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f3f3;
+}
+
+.App {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(7, 159, 185);
+  padding: 16px 16px 16px 38px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header h1 {
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+  margin: 34px auto 36px auto;
+  padding: 8px 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(247, 150, 150);
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  box-shadow: rgba(0, 0, 0, 0.932) 0px 18px 20px -10px;
+  transition: 0.4s;
+}
+
+.navbar a:hover {
+  background-color: rgb(247, 11, 11);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.932) 10px 12px 20px -10px;
+}
+
+.main {
+  margin-top: 26px;
+}
+
+.main h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0, 0, 0, .1),
+    0 0 5px rgba(0, 0, 0, .1),
+    0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .25),
+    0 10px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+}
+
+.grid-container {
+  margin-top: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-areas: 'leftdiv rightdiv'
+    'buttonsdiv buttonsdiv';
+}
+
+.calc-main {
+  grid-area: leftdiv;
+  width: 100%;
+  padding: 6px;
+}
+
+.calc {
+  width: 340px;
+  margin: 0 auto;
+}
+
+.calc p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.calc span {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.calc input {
+  width: 120px;
+  font-size: 18px;
+  padding: 6px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 12px;
+  margin-right: 6px;
+  margin-bottom: 16px;
+  background-color: #f7f3f3;
+  box-shadow: rgba(0, 0, 0, 0.788) 0px 3px 6px, rgba(0, 0, 0, 0.781) 0px 3px 6px;
+}
+
+.result-main {
+  grid-area: rightdiv;
+  width: 100%;
+  padding: 6px;
+}
+
+.result {
+  margin: 0 auto;
+  width: 300px;
+}
+
+.result h3 {
+  font-size: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-decoration: solid underline 3px;
+}
+
+.result p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.result input {
+  border: none;
+  border-bottom: 3px solid black;
+  width: 120px;
+  font-size: 18px;
+  padding: 6px;
+  text-align: center;
+  margin-right: 6px;
+  margin-bottom: 16px;
+  background-color: #f7f3f3;
+}
+
+.result span {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 4px;
+  text-align: center;
+}
+
+.calc-btns {
+  grid-area: buttonsdiv;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.calc-btns button {
+  font-size: 22px;
+  padding: 4px;
+  width: 120px;
+  font-family: 'Times New Roman', Times, serif;
+  border: none;
+  background-color: rgb(0, 255, 221);
+  margin: 0 8px;
+  font-weight: bold;
+  transition: 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.calc-btns button:hover {
+  cursor: pointer;
+  background-color: rgb(2, 128, 111);
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 28px, rgba(0, 0, 0, 0.22) 0px 10px 20px;
+}
+
+.footer {
+  background-color: rgb(66, 63, 63);
+  padding: 18px 0;
+  margin-top: 22px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.author p {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
+
+.author a {
+  color: white;
+}
+
+.author a:hover {
+  color: rgb(0, 255, 221);
+}
+
+@media screen and (max-width: 1000px) {
+  .grid-container {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'leftdiv rightdiv'
+      'buttonsdiv buttonsdiv';
+  }
+
+  .calc {
+    width: 78%;
+  }
+
+  .calc p {
+    font-size: 20px;
+  }
+
+  .calc span {
+    font-size: 16px;
+  }
+
+  .calc input {
+    width: 100px;
+  }
+
+  .result {
+    width: 60%;
+  }
+
+  .result p {
+    font-size: 20px;
+  }
+
+  .result span {
+    font-size: 16px;
+  }
+
+  .result input {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas: 'leftdiv'
+      'buttonsdiv'
+      'rightdiv';
+  }
+
+  .header {
+    padding: 14px 4px;
+    justify-content: space-around;
+  }
+
+  .header img {
+    width: 26px;
+  }
+
+  .header h1 {
+    font-size: 14px;
+  }
+
+  .navbar {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 8px;
+  }
+
+  .navbar>div:first-child {
+    margin-bottom: 34px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  .main h2 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  .calc {
+    width: 100%;
+    padding-left: 24px;
+  }
+
+  .calc p {
+    font-size: 18px;
+  }
+
+  .calc span {
+    font-size: 14px;
+  }
+
+  .calc input {
+    font-size: 14px;
+    width: 90px;
+  }
+
+  .result {
+    width: 100%;
+    padding-left: 24px;
+  }
+
+  .result h3 {
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .result p {
+    font-size: 18px;
+  }
+
+  .result span {
+    font-size: 14px;
+  }
+
+  .result input {
+    font-size: 14px;
+    width: 80px;
+  }
+
+  .calc-btns {
+    margin-bottom: 28px;
+  }
+
+  .calc-btns button {
+    font-size: 18px;
+  }
+
+  .footer {
+    position: relative;
+  }
+}
